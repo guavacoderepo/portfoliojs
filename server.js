@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { databaseconnect } from "./config/db.config.js";
 import { errorResponse } from "./middlewares/response.js";
 import index from "./routers/index.js";
+import cors from "cors";
 
 // dotenv.config({ path: "./config/config.env" });
 dotenv.config();
@@ -10,6 +11,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.use("/api/v1", index());
 app.use(errorResponse);

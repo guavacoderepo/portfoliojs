@@ -1,5 +1,5 @@
 import mysql from "mysql2/promise";
-import * as table from "../helpers/tableQueries.js";
+// import * as table from "../helpers/tableQueries.js";
 
 
 
